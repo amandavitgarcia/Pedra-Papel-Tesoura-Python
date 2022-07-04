@@ -1,0 +1,41 @@
+from random import randint
+opcoes = ('Pedra', 'Papel', 'Tesoura')
+maquina = randint(0,2)
+jogada1 = int(input("Qual é a sua ACAO: [0] Pedra [1] Papel [2] Tesoura \n"));
+while (jogada1 >= 3):
+    print('''\nNumero inválido, Suas opções são somente:
+        [0] Pedra
+        [1] Papel
+        [2] Tesoura \n''')
+    jogada1 = int(input("Qual é a sua ACAO: \n"));
+else:
+    print("VOCÊ escolheu: {}" .format(opcoes[jogada1]));
+    print("A MAQUINA escolheu: {}" .format(opcoes[maquina]));
+        
+if ( opcoes[maquina] == "Papel" and opcoes[jogada1] == "Tesoura"):
+    print("Tesoura vence papel, o ganhador é VOCÊ!");
+    print("Foi bom jogar com você!");
+    
+elif ( opcoes[maquina] == "Tesoura" and opcoes[jogada1] == "Papel"):
+    print("Tesoura vence papel, o ganhador é a MAQUINA!");
+    print("Foi bom jogar com você!");
+    
+elif ( opcoes[maquina] == "Pedra" and opcoes[jogada1] == "Papel"):
+    print("Papel vence pedra, o ganhador é VOCÊ!");
+    print("Foi bom jogar com você!");
+    
+elif ( opcoes[maquina] == "Papel" and opcoes[jogada1] == "Pedra"):
+    print("Tesoura vence papel, o ganhador é a MAQUINA!");
+    print("Foi bom jogar com você!");
+    
+elif ( opcoes[maquina] == "Tesoura" and opcoes[jogada1] == "Pedra"):
+    print("Pedra vence tesoura, o ganhador é VOCÊ!");
+    print("Foi bom jogar com você!");
+
+elif ( opcoes[maquina] == "Pedra" and opcoes[jogada1] == "Tesoura"):
+    print("Pedra vence tesoura, o ganhador é a MAQUINA!");
+    print("Foi bom jogar com você!");
+        
+elif ( opcoes[maquina] == opcoes[jogada1]):
+    print("Empate!");    
+    print("Foi bom jogar com você!");
